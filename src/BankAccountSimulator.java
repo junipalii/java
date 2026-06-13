@@ -36,12 +36,13 @@ public class BankAccountSimulator {
         currentBalance+=statBalance;
 
         //menu
-       while(menuChoice<4){
+       while(isOnline){
             System.out.printf("%6s\n","Menu");
            System.out.printf("1.%-13s\n" , "Deposit");
            System.out.printf("2.%-13s\n" , "Withdraw");
            System.out.printf("3.%-13s\n" , "Check Balance");
            System.out.printf("4.%-13s\n" , "Exit");
+           menuChoice=input.nextInt();
 
            switch(menuChoice){
                case 1:
