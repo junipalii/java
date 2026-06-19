@@ -19,7 +19,17 @@ public class PasswordValidator {
         System.out.println("Create Password :");
         password=input.nextLine();
     //String methods
-    int passLength=password.length()-password.replace(" ","").length();
+    int whiteSpace=password.length()-password.replace(" ","").length();
+    int passLength=password.length()-whiteSpace;
+    //password validation
+    if(!password.isEmpty()){
+        for(int i=0;password.length()<8;i++){
+            if(password.charAt(i)==Character.isUpperCase()){}
+
+        }
+
+    }
+        System.out.println("password length :"+passLength);
 
 
     }
