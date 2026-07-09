@@ -12,9 +12,10 @@ public class Countdown {
         System.out.println("Enter the time in seconds youd want th countdown to start from :");
         count=input.nextInt();
         //for loop that simulates the countdown
-        for(int i=0;i<=count;count--){
-            System.out.println(count);
+        for(int i=count;i>0;i--){
+            System.out.println(i);
         }
+        System.out.println("HAPPY NEW YEAR");
     }
 
 }
