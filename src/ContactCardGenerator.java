@@ -53,7 +53,7 @@ public class ContactCardGenerator {
         System.out.printf("%-10s : %d\n","Age" , age);
         System.out.printf("%-10s : %s\n" , "Email" , email);
         System.out.printf("%-10s : %s\n" , "Phone" , phone);
-
+        System.out.println("==============================");
 
 
     }
