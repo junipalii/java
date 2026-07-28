@@ -15,7 +15,8 @@ public class ArrayPractice3 {
             System.out.println("Enter names 5 times :");
             names[i]=input.next();
         }
-        for(int i=0;i<names.length;i++){
+
+        for(int i=4;i>=0;i--){
             System.out.println(names[i]);
         }
         }
