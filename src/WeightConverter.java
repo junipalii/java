@@ -21,5 +21,6 @@ public class WeightConverter {
         }else{
             System.out.println("Invalid choice , please select 1 or 2");
         }
+        input.close();
     }
 }
