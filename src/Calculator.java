@@ -31,19 +31,14 @@ public class Calculator {
                result=value1*value2;
                System.out.println(result);
            }
-           case "/"  -> {
+           case "%" , "/"-> {
                if(value2==0){
                    System.out.println("Zero division is not possible");
+               }else if(operator.equals("%")){
+                   result=value1%value2;
+                   System.out.println("Answer :"+result);
                }else{
                    result=value1/value2;
-                   System.out.println("Answer :"+result);
-               }
-           }
-           case "%" -> {
-               if(value2==0){
-                   System.out.println("Zero division is not possible");
-               }else{
-                   result=value1%value2;
                    System.out.println("Answer :"+result);
                }
            }
