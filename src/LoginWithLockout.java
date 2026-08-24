@@ -15,7 +15,8 @@ PSEUDO CODE
 -use .equalsIgnoreCase to check for matches
 -actually passwords are case sensitive so .equals works
 -while loop with a counter
-
+-create a boolean to be used as the condition in the while loop
+*/
 
 public class LoginWithLockout {
     public static void main(String[] args){
@@ -25,13 +26,29 @@ public class LoginWithLockout {
     String password="admin123";
     String usernameCopy;
     String passcopy;
-    int count=1;
-    while(count<=3&&username!=usernameCopy&&password!="ädmin123"){
-        System.out.println("Enter your username");
-        usernameCopy= input.next();
+    int count=0;
+        System.out.println("LOGIN WITH LOCKOUT");
+        System.out.println("Please enter your username :");
+        usernameCopy=input.next();
+        System.out.println("Please enter your password");
+        passcopy= input.next();
+        boolean passwordCheck=(passcopy.equals("admin123")&&usernameCopy.equals("sydney"));
 
-        count ++;
+    while(count<=2&&!passwordCheck){
+        System.out.printf("%15s\n","TRY AGAIN");
+        System.out.println("Please enter your username");
+        usernameCopy=input.next();
+        System.out.println("Please enter your password");
+        passcopy= input.next();
+        passwordCheck=(passcopy.equals("admin123")&&usernameCopy.equals("sydney"));
+        count++;
+
+    }
+    if(!passwordCheck){
+        System.out.println("ACCOUNT LOCKED");
+    }
+    else{
+        System.out.println("ACCESS GRANTED");
     }
     }
 }
-*/
