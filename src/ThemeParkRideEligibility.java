@@ -47,19 +47,18 @@ public class ThemeParkRideEligibility {
         if(checkEligibility){
             System.out.println("Enjoy the ride ");
         }else{
-            while(count<4) {
                 System.out.println("You are not eligible for the ride ");
                 if (height < 140) {
                     System.out.println("Your height " + height + " is lower than 140cm");
-                } else if (age < 11 && age > 60) {
+                } if (age < 11 || age > 60) {
                     System.out.println("Your age " + height + " does not meet age requirements");
-                } else if (pregnant.equals("Y")) {
+                } if (pregnant.equals("Y")) {
                     System.out.println("Expectant women are not permitted in the heme park");
-                } else if (validTicket.equals("N")) {
+                } if (validTicket.equals("N")) {
                     System.out.println("You do not have a valid ticket");
-                    count++;
+
                 }
             }
         }
     }
-}
+
