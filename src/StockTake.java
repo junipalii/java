@@ -20,6 +20,8 @@
         import java.util.Scanner;
 public class StockTake {
     public static void main(String[]args){
+        //Scanner method and object to be used
+        Scanner input=new Scanner(System.in);
         //A list of all the products available and variables
         String hairCare[]={"Hair Oil","Yellow Castor oil","Hair Butter","Shampoo","Avocado oil"};
         int hairCareQty[]=new int[hairCare.length];
@@ -33,23 +35,21 @@ public class StockTake {
         String lotions[]={"Cherry Lotion","Vanilla Lotion","Chocolate Lotion","Watermelon Lotion","Untamed Lotion", "Bare Bliss Lotion"};
         int lotionQty[]=new int[lotions.length];
         int totalLotions=0;
-        //Scanner object
-        Scanner input=new Scanner(System.in);
         //Face care input
         System.out.printf("%15s\n","Face Care");
-        getProductsIO(faceCare,faceCareQty);//method that gets input and outputs it
+        getProductsIO(faceCare,faceCareQty,input);//method that gets input and outputs it
         //Hair Care input
         System.out.printf("%15s\n","Hair Care");
-        getProductsIO(hairCare,hairCareQty);
+        getProductsIO(hairCare,hairCareQty,input);
         //Body care input
         System.out.printf("%15s\n","Body Care");
-        getProductsIO(bodyCare,bodyCareQty);
+        getProductsIO(bodyCare,bodyCareQty,input);
         //Butters input
         System.out.printf("%15s\n","Butters");
-        getProductsIO(butters,buttersQty,totalButters);
+        getProductsIO(butters,buttersQty,totalButters,input);
         //inputting lotions
         System.out.printf("%15s","Lotions");
-        getProductsIO(lotions,lotionQty,totalLotions);
+        getProductsIO(lotions,lotionQty,totalLotions,input);
 
 
     }
@@ -61,10 +61,9 @@ public class StockTake {
     }
 
     //method that uses a for loop for the input process and outputs what was got
-    static void getProductsIO(String [] product,int [] quantity){
+    static void getProductsIO(String [] product,int [] quantity,Scanner input){
         //first use s for loop to get input
         for(int i=0;i<product.length;i++){
-            Scanner input=new Scanner(System.in);
             System.out.println(product[i]+":");
             quantity[i]=input.nextInt();
         }
@@ -73,8 +72,7 @@ public class StockTake {
     }
 
     //overload getProductsIO
-    static void getProductsIO(String [] product,int [] quantity,int total){
-        Scanner input=new Scanner(System.in);
+    static void getProductsIO(String [] product,int [] quantity,int total,Scanner input){
         //first use s for loop to get input
         for(int i=0;i<product.length;i++){
             System.out.println("Enter the quantity for "+product[i]);
@@ -82,6 +80,7 @@ public class StockTake {
             //get a total number for butters
             total+=quantity[i];
         }
+
         //use printBreakdown() for output
         System.out.println("Total"+product+":"+total);
         printBreakdown(product,quantity);
