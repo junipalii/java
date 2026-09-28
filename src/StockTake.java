@@ -46,10 +46,12 @@ public class StockTake {
         getProductsIO(bodyCare,bodyCareQty,input);
         //Butters input
         System.out.printf("%15s\n","Butters");
-        getProductsIO(butters,buttersQty,totalButters,input);
+        totalButters=getProductsIO(butters,buttersQty,totalButters,input);
+        System.out.println("Total Butters :"+totalButters);
         //inputting lotions
-        System.out.printf("%15s","Lotions");
-        getProductsIO(lotions,lotionQty,totalLotions,input);
+        System.out.printf("%15s\n","Lotions");
+        totalLotions=getProductsIO(lotions,lotionQty,totalLotions,input);
+        System.out.println("Total lotions :"+totalLotions);
 
 
     }
@@ -72,7 +74,7 @@ public class StockTake {
     }
 
     //overload getProductsIO
-    static void getProductsIO(String [] product,int [] quantity,int total,Scanner input){
+    static int getProductsIO(String [] product,int [] quantity,int total,Scanner input){
         //first use s for loop to get input
         for(int i=0;i<product.length;i++){
             System.out.println("Enter the quantity for "+product[i]);
@@ -82,8 +84,9 @@ public class StockTake {
         }
 
         //use printBreakdown() for output
-        System.out.println("Total"+product+":"+total);
         printBreakdown(product,quantity);
+        return total;
+
     }
 }
 
