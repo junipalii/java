@@ -45,7 +45,7 @@ public class ArrayIOSearch4 {
         //search through the array and determine the largest number
         for(int i=0;i<numbers.length;i++){
            if(largestNo<numbers[i]){
-             largestNo=numbers[i];S
+             largestNo=numbers[i];
            }
         }
         System.out.println("The largest number is :"+largestNo);
