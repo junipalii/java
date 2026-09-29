@@ -14,8 +14,8 @@ public class varagsAverage {
     }
     //method to return average
     static double average(double... numbers){
-        int sum=0;
-        int Average=0;
+        double sum=0;
+        double Average=0;
         int length=0;
         //find the sum
         for(double number:numbers){
