@@ -40,8 +40,16 @@ public class QuizGame {
         //loop through printing the questions and answers
         for(int i =0 ; i< questions.length ;i++){
             System.out.println(questions[i]);
-            for(int j=0 ; j< answers.length ; j++){
+            for(int j=0 ; j< answers[i].length ; j++){
                 System.out.println(answers[i][j]);
+            }
+            System.out.print("CHOICE :");
+            choice=input.nextInt();
+            if(choice==marksheet[i]){
+                System.out.println("CORRECT!");
+                counter++;
+            }else{
+                System.out.println("WRONG !");
             }
 
         }
