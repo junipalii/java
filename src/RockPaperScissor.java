@@ -32,14 +32,16 @@ public class RockPaperScissor {
                 case 1 -> System.out.println("Computer guess :PAPER");
                 case 2 -> System.out.println("Computer guess :SCISSOR");
             }
-            if(userGuess.equalsIgnoreCase("rock")&&computerGuess==2){
+            if(userGuess.equalsIgnoreCase("rock")&&computerGuess==2) {
                 System.out.println("YOU WIN !");
             }else if (userGuess.equalsIgnoreCase("paper")&&computerGuess==0){
                 System.out.println("YOU WIN !");
             }else if(userGuess.equalsIgnoreCase("scissor")&&computerGuess==1){
                 System.out.println("YOU WIN !");
-            }else if(userGuess.equalsIgnoreCase("scissor")&&computerGuess==2||userGuess.equalsIgnoreCase("paper")&&computerGuess==1||userGuess.equalsIgnoreCase("rock")&&computerGuess==0){
+            }else if(userGuess.equalsIgnoreCase("scissor")&&computerGuess==2||userGuess.equalsIgnoreCase("paper")&&computerGuess==1||userGuess.equalsIgnoreCase("rock")&&computerGuess==0) {
                 System.out.println("TIE !");
+            }else if(!userGuess.equalsIgnoreCase("rock")&&!userGuess.equalsIgnoreCase("paper")&&!userGuess.equalsIgnoreCase("scissor")){
+                System.out.println("INVALID CHOICE");
             }else {
                 System.out.println("YOU LOSE !");
             }
